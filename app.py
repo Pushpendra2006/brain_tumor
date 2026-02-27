@@ -32,7 +32,7 @@ if uploaded_file:
     class_index = np.argmax(prediction)
     confidence = np.max(prediction)*100
 
-    if class_index == 1:
-        st.error(f"⚠ No Brain Tumor Detected ({confidence:.2f}%)")
+    if class_index == 0:
+        st.error(f"⚠  Brain Tumor Detected ({confidence:.2f}%)")
     else:
-        st.success(f"✅  Brain Tumor Detected ({confidence:.2f}%)")
+        st.success(f"✅ No Brain Tumor Detected ({confidence:.2f}%)")
